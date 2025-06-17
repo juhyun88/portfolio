@@ -1,8 +1,11 @@
-
+import { useScrollFadeIn } from "../hooks/useScrollFadeIn";
 
  
             
             function Program() {
+                const fadeInLeft1 = useScrollFadeIn("left", 1.2, 0);
+                const fadeInLeft2 = useScrollFadeIn("left", 1.2, 0.3);
+
                 return (
                     <div>
                         <section className="se04">
@@ -13,10 +16,10 @@
                         <dd >PROJECT</dd>
                     </dl>
 
-                    <article className="bx _1">
+                    <article className="bx _1"  {...fadeInLeft1}>
                         <span className="linetop" ></span>
                         <div className="obj">
-                            <img src="/public/dog.svg" alt="object" />
+                            <img src="https://juhyun88.github.io/pawfect-wave-dothome/icon.png" alt="object" />
                         </div>
 
                         <div className="lbx">
@@ -25,10 +28,11 @@
                                 <dd >PawFectWave</dd>
                             </dl>
                             <strong >장례서비스</strong>
-                            <a href="/agenda/" className="morebtn">
+                            <a href="https://vite-react-paw.vercel.app" className="morebtn group">
                                 <span>Learn more</span>
-                                <i className="xi-long-arrow-right"></i>
+                                <i className="xi-long-arrow-right text-white group-hover:text-black transition-colors duration-300"></i>
                             </a>
+
                             <img src="https://www.inzent-iss.com/asset/img/main/se04_star_purple.png" alt="object"></img>
                         </div>
 
@@ -61,10 +65,10 @@
                         </div>
                     </article>
 
-                    <article className="bx _2">
+                    <article className="bx _2" {...fadeInLeft2}>
                         <span className="linetop" ></span>
                         <div className="obj">
-                            <img src="/public/vipimg.png" alt="object" />
+                            <img src="/public/vip.jpg" alt="object" />
                         </div>
 
                         <div className="lbx">
@@ -73,7 +77,7 @@
                                 <dd >VIP 동물의료센터</dd>
                             </dl>
                             <strong >동물의료센터</strong>
-                            <a href="/agenda/" className="morebtn" >
+                            <a href="https://www.i-web.kr/green19/" className="morebtn" >
                                 <span>Learn more</span>
                                 <i className="xi-long-arrow-right"></i>
                             </a>

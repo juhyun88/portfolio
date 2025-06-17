@@ -13,12 +13,21 @@ function App() {
     <div className="App bg-black">     
       <Hd />     
       <main className='_m'>
-        <Maintitle />
+      <Maintitle />
+      <section id="project">
+      <Project />
+      </section>
+    
+  
+        <section id="aboutme">
         <Aboutme />
-        <Project />
+        </section>
+        <section id="contact">
         <Contact />
+        </section>
+        <section id="preinterview">
         <Preinterview id="preInterview" datainfo={db.preinterview} />
-     
+        </section>
       </main>
       <Ft />      
     </div> 

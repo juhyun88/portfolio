@@ -1,46 +1,111 @@
-import React from 'react';
+import React, { useState } from 'react';
+import axios from 'axios';
 
 const Contact = () => {
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
-        // 여기에 폼 제출 로직 추가
-    };
+  const [form, setForm] = useState({
+    name: '',
+    phone: '',
+    subject: '',
+    message: '',
+  });
 
-    return (
-        <section className="se05 bg-black">
-        <div className="contact flex aos-init aos-animate" data-aos="fade-up" data-aos-duration="800">
-        <div className="imgWrap"><img src="http://mnow.kr/images/main/contact.jpg" alt="" /></div>
-        <div className="textWrap">
-            <p className="mont title">Contact us</p>
-            <form name="frm_ins" method="post" encType="multipart/form-data" onSubmit={handleSubmit}>
-                <ul className="typeTable">
-                    <li className="flex_sb">
-                        <label><input type="text" className="input_ty1" name="etc_4" maxLength={50} required placeholder="이름 *" autoComplete="off" /></label>
-                        
-                    </li>
-                    <li className="flex_sb">
-                        <label><input type="tel" className="input_ty1" name="etc_2" maxLength={50} required placeholder="연락처 *" autoComplete="off" /></label>
-                        
-                    </li>
-                    <li className="flex_sb">
-                        <label><input type="text" className="input_ty1" name="subject" maxLength={100} required placeholder="제목 *" autoComplete="off" /></label>
-                    </li>
-                    <li className="textArea">
-                        <label><textarea name="content" id="content_" className="ta_ty1" required placeholder="내용 *"></textarea></label>
-                    </li>
-                    <li className="inquiry_agree">
-                        <label><input type="checkbox" id="user_agree" name="user_agree" value="Y" /><span>개인정보 수집 및 이용에 동의합니다.</span></label>
-                        <a href="/policy/privacy.php" className="link">개인정보처리방침</a>
-                    </li>
-                    <li className="submitBox">
-                        <input type="submit" id="button_submit" value="SEND" className="sendBtn mont circleBox mint" />
-                    </li>
-                </ul>
-            </form>
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    try {
+      await axios.post('http://localhost:5000/send-email', form);
+      alert('문의가 성공적으로 전송되었습니다!');
+    } catch (err) {
+      alert('이메일 전송 실패');
+      console.error(err);
+    }
+  };
+
+  return (
+    <section className="se05 bg-black">
+      <div className="contact flex" data-aos="fade-up" data-aos-duration="800">
+        <div className="imgWrap">
+          <img src="http://mnow.kr/images/main/contact.jpg" alt="" />
         </div>
-    </div>
+        <div className="textWrap">
+          <p className="mont title">Contact us</p>
+          <form onSubmit={handleSubmit}>
+            <ul className="typeTable">
+              <li className="flex_sb">
+                <label>
+                  <input
+                    type="text"
+                    className="input_ty1 text-white placeholder-white"
+                    name="name"
+                    placeholder="이름 *"
+                    required
+                    autoComplete="off"
+                    onChange={handleChange}
+                  />
+                </label>
+              </li>
+              <li className="flex_sb">
+                <label>
+                  <input
+                    type="tel"
+                    className="input_ty1 text-white placeholder-white"
+                    name="phone"
+                    placeholder="연락처 *"
+                    required
+                    autoComplete="off"
+                    onChange={handleChange}
+                  />
+                </label>
+              </li>
+              <li className="flex_sb">
+                <label>
+                  <input
+                    type="text"
+                    className="input_ty1 text-white placeholder-white"
+                    name="subject"
+                    placeholder="제목 *"
+                    required
+                    autoComplete="off"
+                    onChange={handleChange}
+                  />
+                </label>
+              </li>
+              <li className="textArea">
+                <label>
+                  <textarea
+                    name="message"
+                    className="ta_ty1"
+                    placeholder="내용 *"
+                    required
+                    onChange={handleChange}
+                  ></textarea>
+                </label>
+              </li>
+              <li className="inquiry_agree">
+                <label>
+                  <input type="checkbox" name="user_agree" value="Y" required />
+                  <span className="text-white">개인정보 수집 및 이용에 동의합니다.</span>
+                </label>
+                <a href="/policy/privacy.php" className="link text-white">
+                  개인정보처리방침
+                </a>
+              </li>
+              <li className="submitBox">
+                <input
+                  type="submit"
+                  value="SEND"
+                  className="sendBtn mont circleBox mint text-white"
+                />
+              </li>
+            </ul>
+          </form>
+        </div>
+      </div>
     </section>
-    );
+  );
 };
 
 export default Contact;
