@@ -68,7 +68,7 @@ import { useScrollFadeIn } from "../hooks/useScrollFadeIn";
                     <article className="bx _2" {...fadeInLeft2}>
                         <span className="linetop" ></span>
                         <div className="obj">
-                            <img src="/public/vip.jpg" alt="object" />
+                            <img src="/vip.jpg" alt="object" />
                         </div>
 
                         <div className="lbx">

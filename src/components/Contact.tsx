@@ -16,7 +16,7 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-      await axios.post('https://portfolio-nine-xi-83.vercel.app/api/contact-241ksd', form);
+      await axios.post('/api/send-mail', form);
       alert('문의가 성공적으로 전송되었습니다!');
     } catch (err) {
       alert('이메일 전송 실패');
@@ -28,7 +28,7 @@ const Contact = () => {
     <section className="se05 bg-black">
       <div className="contact flex" data-aos="fade-up" data-aos-duration="800">
         <div className="imgWrap">
-          <img src="https://mnow.kr/images/main/contact.jpg" alt="" />
+          <img src="/contact.jpg" alt="" />
         </div>
         <div className="textWrap">
           <p className="mont title">Contact us</p>
