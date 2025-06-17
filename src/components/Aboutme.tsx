@@ -11,7 +11,7 @@ const Aboutme = () => {
       {/*  배경 이미지 + 텍스트 오버레이 영역 */}
       <div
         className="mainVisual relative h-[840px] w-full bg-cover bg-center bg-fixed"
-        style={{ backgroundImage: "url('/src/assets/IMG_2599.JPG')" }}
+        style={{ backgroundImage: "url('/IMG_2599.JPG')" }}
       >
         {/*  어두운 배경 오버레이 */}
         <div className="absolute inset-0 bg-black/40 z-0"></div>
