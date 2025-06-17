@@ -7,7 +7,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return res.status(405).json({ error: 'POST 요청만 허용됩니다.' })
   }
 
-  const { name, email, message, phone } = req.body;
+  const { name, email, message, phone, subject } = req.body;
 
   if (!name || !email || !message) {
     return res.status(400).json({ error: '모든 필드를 입력해주세요.' })
@@ -28,12 +28,14 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       from: `"${name}" <${process.env.EMAIL_USER}>`, 
       to: 'tls839@naver.com',
       replyTo: email,
-      subject: `[포트폴리오 문의] ${name}`,
+      subject: `[포트폴리오 문의] ${subject ||name}`,
       html: `
         <p><strong>이름:</strong> ${name}</p>
         <p><strong>이메일:</strong> ${email}</p>
         <p><strong>연락처:</strong> ${phone || '없음'}</p>
+        <p><strong>제목:</strong> ${subject || '없음'}</p>
         <p><strong>내용:</strong><br/>${message}</p>
+        
       `,
     })
 
