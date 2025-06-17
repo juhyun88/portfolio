@@ -4,6 +4,7 @@ import axios from 'axios';
 const Contact = () => {
   const [form, setForm] = useState({
     name: '',
+    email: '',
     phone: '',
     subject: '',
     message: '',
@@ -47,6 +48,19 @@ const Contact = () => {
                   />
                 </label>
               </li>
+              <li className="flex_sb">
+              <label>
+                <input
+                  type="email"
+                  className="input_ty1 text-white placeholder-white"
+                  name="email" // ✅ name="email" 반드시 포함
+                  placeholder="이메일 *"
+                  required
+                  autoComplete="off"
+                  onChange={handleChange}
+                />
+              </label>
+            </li>
               <li className="flex_sb">
                 <label>
                   <input
