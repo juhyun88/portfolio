@@ -5,9 +5,10 @@ import Maintitle from './components/Maintitle'
 import Aboutme from './components/Aboutme'
 import Project from './components/Project'
 import Preinterview from './components/Preinterview'
-import db from './db/db.json'
+
 import Contact from './components/Contact'  
 import ProjectFlow from './components/ProjectFlow'
+import { preinterviewData } from './data/preinterviewData';
 
 function App() {
   return (
@@ -29,7 +30,7 @@ function App() {
         <Contact />
         </section>
         <section id="preinterview">
-        <Preinterview id="preInterview" datainfo={db.preinterview} />
+        <Preinterview datainfo={preinterviewData} />
         </section>
       </main>
       <Ft />      
