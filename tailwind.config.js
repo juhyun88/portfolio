@@ -56,6 +56,10 @@ export default {
           { fontWeight: '600', letterSpacing: '0.02em' }
         ],
       },
+      fontFamily: {
+        pretendard: ['"Sora"', 'sans-serif'],
+        // 원하는 이름: [실제 폰트 패밀리, 대체 폰트]
+      },
     },
   },
   plugins: [],

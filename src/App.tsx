@@ -7,6 +7,7 @@ import Project from './components/Project'
 import Preinterview from './components/Preinterview'
 import db from './db/db.json'
 import Contact from './components/Contact'  
+import ProjectFlow from './components/ProjectFlow'
 
 function App() {
   return (
@@ -17,7 +18,9 @@ function App() {
       <section id="project">
       <Project />
       </section>
-    
+      <section id="projectflow">
+        <ProjectFlow />
+        </section>
   
         <section id="aboutme">
         <Aboutme />

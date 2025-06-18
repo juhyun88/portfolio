@@ -18,7 +18,7 @@ const Contact = () => {
     e.preventDefault();
     try {
       await axios.post('/api/send-mail', form);
-      alert('문의가 성공적으로 전송되었습니다!');
+      alert('메일이 전송되었습니다!');
     } catch (err) {
       alert('이메일 전송 실패');
       console.error(err);
@@ -36,10 +36,10 @@ const Contact = () => {
           <form onSubmit={handleSubmit}>
             <ul className="typeTable">
               <li className="flex_sb">
-                <label>
+                <label className='w-[100%]'>
                   <input
                     type="text"
-                    className="input_ty1 text-white placeholder-white"
+                    className="input_ty1 text-white placeholder-white "
                     name="name"
                     placeholder="이름 *"
                     required
@@ -49,7 +49,7 @@ const Contact = () => {
                 </label>
               </li>
               <li className="flex_sb">
-              <label>
+              <label className='w-[100%]'>
                 <input
                   type="email"
                   className="input_ty1 text-white placeholder-white"
@@ -62,7 +62,7 @@ const Contact = () => {
               </label>
             </li>
               <li className="flex_sb">
-                <label>
+                <label className='w-[100%]'>
                   <input
                     type="tel"
                     className="input_ty1 text-white placeholder-white"
@@ -75,7 +75,7 @@ const Contact = () => {
                 </label>
               </li>
               <li className="flex_sb">
-                <label>
+                <label className='w-[100%]'>
                   <input
                     type="text"
                     className="input_ty1 text-white placeholder-white"
@@ -85,10 +85,10 @@ const Contact = () => {
                     autoComplete="off"
                     onChange={handleChange}
                   />
-                </label>
+                </label >
               </li>
               <li className="textArea">
-                <label>
+                <label className='w-[100%]'>
                   <textarea
                     name="message"
                     className="ta_ty1"
@@ -107,13 +107,27 @@ const Contact = () => {
                   개인정보처리방침
                 </a>
               </li>
-              <li className="submitBox">
-                <input
+              <div className="submitBox grad_btn mt-10 flex justify-center">
+                <button
                   type="submit"
-                  value="SEND"
-                  className="sendBtn mont circleBox mint text-white"
-                />
-              </li>
+                  className="relative flex items-center justify-end w-[272px] px-[25px] py-[30px] box-border border border-gray-500 overflow-hidden transition duration-400 group"
+                >
+                  {/* 그라디언트 배경 (hover 시 오른쪽으로 슬라이드) */}
+                  <span className="absolute top-0 left-0 w-full h-full transform -translate-x-full group-hover:translate-x-0 transition-transform duration-400 z-0 bg-gradient-to-r from-[#b31ff1] to-[#d56d92]"></span>
+
+                  {/* 버튼 텍스트 */}
+                  <span className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 whitespace-nowrap text-white text-[20px] font-light z-10">
+                    보내기
+                  </span>
+
+                  {/* 아이콘 */}
+                  <div className="inline-flex items-center ml-2 z-10">
+                    <i className="xi-angle-right-min text-white group-hover:text-black transition duration-300"></i>
+                    <i className="xi-angle-right-min text-white group-hover:text-black transition duration-300"></i>
+                  </div>
+                </button>
+              </div>
+
             </ul>
           </form>
         </div>

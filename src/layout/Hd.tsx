@@ -27,7 +27,9 @@ function Hd() {
               <a href="#project" className="text-white hover:text-black transition duration-300">
                 PROJECT
               </a>
+             
               <ul className="submenu">
+           
                 <li>
                   <a href="#team" className="text-white hover:text-black transition duration-300">
                     <em></em><span>TEAM</span>
@@ -40,6 +42,11 @@ function Hd() {
                 </li>
               </ul>
             </li>
+            <li>
+                <a href="#projectflow" className="text-white hover:text-black transition duration-300">
+                  PROJECTFLOW
+                </a>
+              </li>
             <li>
               <a href="#aboutme" className="text-white hover:text-black transition duration-300">
                 ABOUTME
