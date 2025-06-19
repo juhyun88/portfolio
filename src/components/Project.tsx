@@ -6,7 +6,7 @@ function Program() {
 
   return (
     <div>
-      <section className="se04 my-20">
+      <section className="se04 my-10">
         <div className="wrap">
           <dl>
             <dt>팀 프로젝트</dt>
