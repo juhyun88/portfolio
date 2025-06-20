@@ -6,9 +6,9 @@ function Program() {
 
   return (
     <div>
-      <section className="se04 my-10">
+      <section className="se04 my-10 mx-[16px] lg:mx-[0]">
         <div className="wrap">
-          <dl>
+          <dl className="flex flex-col items-center lg:items-start">
             <dt>팀 프로젝트</dt>
             <dd>TEAM PROJECT</dd>
           </dl>
@@ -16,191 +16,277 @@ function Program() {
           {/* 첫 번째 프로젝트 */}
           <article className="bx _1" {...fadeInLeft1}>
             <span className="linetop"></span>
-
-            <div className="obj absolute right-0 w-[772px] h-[421px]">
-                {/* 배경 이미지 */}
-                <img
-                    src="https://juhyun88.github.io/pawfectwave_team_react/img/main/Main_background1.svg"
-                    alt="PawfectWave"
-                    className="absolute inset-0 w-full h-full object-contain z-0"
-                />
-               {/* 이미지 중앙 텍스트 */}
-                    <div className="absolute inset-0 flex items-center justify-center z-10">
-                        <span className="text-white text-[30px] font-bold flex items-center gap-2">
-                        <svg width="50" height="30" viewBox="0 0 50 30" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                            <g >
-                            <path stroke="2" d="M38.6175 18.1833C38.6287 18.1278 38.6422 18.0746 38.6624 18.0237C38.6692 18.0104 38.6804 17.986 38.6826 17.9815C38.6939 17.9638 38.7051 17.9461 38.7163 17.9283C38.7185 17.9261 38.741 17.8929 38.75 17.8862C38.7769 17.8574 38.8083 17.8308 38.8375 17.8064C38.979 17.6911 38.9565 17.4539 38.8375 17.3364C38.6983 17.199 38.503 17.2212 38.3616 17.3364C37.8093 17.7865 37.8407 18.6577 38.2246 19.203C38.6714 19.8392 39.4594 20.0742 40.1913 20.2139C40.3687 20.2471 40.555 20.1651 40.6066 19.9811C40.6515 19.8193 40.5505 19.6065 40.3709 19.571C40.0633 19.5112 39.7535 19.4424 39.4617 19.3272C39.4482 19.3227 39.4347 19.3161 39.3921 19.2961C39.3584 19.2806 39.327 19.2651 39.2955 19.2474C39.2327 19.2141 39.1698 19.1786 39.1092 19.1387C39.089 19.1254 39.0261 19.0811 39.0261 19.0811C39.0418 19.0922 39.0351 19.0855 39.0037 19.0634C38.9902 19.0523 38.9767 19.039 38.9633 19.0279C38.9139 18.9835 38.8645 18.9348 38.8218 18.8816C38.8128 18.8705 38.7926 18.8439 38.7926 18.8395C38.7747 18.8151 38.759 18.7885 38.7455 18.7619C38.7298 18.7353 38.7163 18.7064 38.7028 18.6798C38.7006 18.6732 38.6983 18.671 38.6961 18.6665C38.6916 18.6555 38.6871 18.6422 38.6826 18.6311C38.6624 18.5668 38.6422 18.5047 38.6287 18.4404C38.6265 18.4338 38.622 18.3806 38.622 18.3828C38.6198 18.3628 38.6175 18.3407 38.6175 18.3185C38.6175 18.2897 38.6175 18.2586 38.6198 18.2298C38.6153 18.2143 38.6153 18.1988 38.6175 18.1833Z" fill="#ffffff"/>
-                            <path  d="M32.9216 16.7578C30.3712 16.2413 27.6479 16.8088 25.551 18.3406C25.2053 18.5933 25.5421 19.1697 25.89 18.9148C27.841 17.4916 30.36 16.9174 32.742 17.4007C33.164 17.4849 33.3459 16.8443 32.9216 16.7578Z" fill="#ffffff"/>
-                            <path  d="M6.10451 24.9468C4.86299 24.3017 3.91108 23.1423 3.53616 21.8056C3.04674 20.0543 3.70005 18.2653 4.29948 16.627C4.44765 16.2236 3.79659 16.0506 3.65066 16.4497C3.12756 17.8795 2.59099 19.3803 2.70549 20.9255C2.79304 22.1093 3.27573 23.2243 4.0413 24.1354C4.83156 25.0776 5.88898 25.6961 7.07886 26.0131C7.74789 26.1927 8.48427 26.3102 9.06124 26.7181C9.53046 27.0484 9.966 27.6514 9.73252 28.241C9.53495 28.7354 8.97818 29.0058 8.49325 29.1455C7.93647 29.3051 7.34602 29.3428 6.77129 29.2985C5.60835 29.2076 4.49255 28.7221 3.56535 28.0349C1.46397 26.4786 0.550232 23.967 0.675955 21.4287C0.752287 19.8791 1.18334 18.3429 1.84788 16.9396C2.41363 15.7447 3.19042 14.3747 4.56439 13.9868C4.97973 13.8693 4.80462 13.2286 4.38479 13.3461C3.08041 13.7119 2.21158 14.8137 1.59643 15.9465C0.891481 17.2455 0.379608 18.6643 0.143877 20.1208C-0.300644 22.8475 0.249395 25.7294 2.24076 27.76C3.92904 29.4825 6.76455 30.6374 9.13084 29.6199C9.67864 29.3849 10.1793 28.9903 10.3836 28.4162C10.6014 27.7999 10.3813 27.1459 9.97723 26.6582C9.00961 25.4944 7.36174 25.5986 6.10451 24.9468Z" fill="#ffffff"/>
-                            <path  d="M36.0646 13.5634C36.6056 12.7631 37.3083 12.0714 38.1166 11.5372C38.4758 11.3 38.139 10.7236 37.7776 10.963C36.105 12.067 34.8657 13.7651 34.3628 15.6915C34.2416 16.1571 34.08 16.7268 34.2416 17.199C34.3763 17.5936 34.7355 17.8485 35.1419 17.9261C36.0668 18.099 37.0075 17.6091 37.791 17.1835C38.8754 16.596 39.8565 15.8268 40.6894 14.9245C40.9813 14.6097 40.5053 14.1375 40.2135 14.4545C39.5759 15.144 38.8574 15.7514 38.0582 16.2546C37.6608 16.5051 37.2477 16.729 36.8212 16.9241C36.4777 17.0815 36.1207 17.2389 35.7413 17.2832C35.4831 17.312 35.0857 17.3231 34.9241 17.0748C34.7153 16.7556 34.9353 16.1615 35.0251 15.8268C35.2384 15.022 35.5931 14.2595 36.0646 13.5634Z" fill="#ffffff"/>
-                            <path  d="M48.7601 15.3568C48.136 14.153 47.3547 13.0335 46.4567 12.0138C46.4095 11.9606 46.3579 11.9318 46.3063 11.9163C45.8415 10.1805 45.0199 8.53559 43.9445 7.08577C42.1978 4.73371 39.8225 2.83167 37.1307 1.63014C34.0685 0.262353 30.6313 -0.178797 27.2974 0.0650552C23.7704 0.322208 20.3265 1.31313 17.1228 2.77403C14.294 4.06423 11.6179 5.75567 9.39977 7.93039C7.28268 10.0053 5.57644 12.5791 4.9366 15.4854C4.37533 18.0281 4.64923 21.1849 6.73713 23.0293C7.21982 23.4549 7.77884 23.7719 8.39174 23.9736C12.022 25.0045 15.778 25.5498 19.5429 25.7892C21.1818 25.8934 22.9397 25.8668 24.4102 25.0532C25.5417 24.4281 26.5677 22.9982 26.0963 21.6659C25.4811 19.9257 23.2585 20.3003 21.7364 20.5154C21.9137 19.6996 22.3089 18.937 22.4256 18.1057C22.5536 17.1901 22.2639 16.3256 21.6017 15.6694C20.9304 15.0043 20.0211 14.6563 19.0962 14.5011C18.2139 14.3548 17.2799 14.2794 16.3909 14.3991C15.558 14.5122 14.6936 14.8602 14.3344 15.6671C14.1615 16.0551 14.7408 16.3943 14.9159 16.0019C15.1853 15.3967 15.7892 15.1595 16.4156 15.062C17.1654 14.9422 17.9759 15.0065 18.7235 15.1107C19.5564 15.226 20.4073 15.4743 21.0359 16.0507C21.6421 16.6071 21.8935 17.3409 21.7409 18.1478C21.5635 19.0877 21.1077 19.9434 20.9977 20.9011C20.9798 21.0651 21.1684 21.2536 21.3345 21.2336C22.1382 21.1361 22.9554 20.9853 23.7681 20.9898C24.3968 20.992 25.1242 21.1472 25.416 21.7657C25.6472 22.2556 25.5036 22.8475 25.2566 23.3041C24.9356 23.8983 24.4349 24.3084 23.8288 24.601C22.4593 25.2594 20.8406 25.2128 19.3588 25.1087C17.6571 24.9889 15.9553 24.8182 14.2671 24.5611C12.3453 24.2685 10.4415 23.8606 8.57134 23.3308C6.08382 22.5172 5.21498 19.5666 5.35642 17.2322C5.5248 14.4678 6.85163 11.8475 8.62298 9.7482C10.4774 7.54909 12.8257 5.79114 15.3492 4.40562C18.2184 2.82945 21.3569 1.67448 24.5876 1.08258C27.8384 0.486254 31.2307 0.499555 34.4299 1.37521C37.1599 2.12228 39.6676 3.56101 41.6859 5.52512C43.6369 7.42052 45.1276 9.81027 45.7495 12.4572C46.3871 15.1706 46.0122 18.0325 44.5529 20.4333C43.2934 22.5061 41.1673 24.2596 38.6416 24.417C37.6965 24.4769 36.7221 24.3106 35.9274 23.7741C35.072 23.1955 34.6185 22.2201 34.5085 21.2225C34.4703 20.8678 34.4591 20.5154 34.5354 20.1651C34.6275 19.735 34.7981 19.3271 34.9642 18.9215C35.1281 18.5247 34.4771 18.354 34.3154 18.7441C33.9787 19.5577 33.7384 20.3358 33.835 21.2225C33.9001 21.8277 34.0505 22.4174 34.3334 22.9583C34.8228 23.8983 35.6984 24.5655 36.7131 24.8737C39.0278 25.5786 41.54 24.5833 43.2597 23.0448C44.0275 22.3576 44.6764 21.5484 45.1995 20.6639C45.2354 21.3511 45.7158 22.0007 46.331 22.3265C47.2447 22.8098 48.3044 22.5194 49.0138 21.8233C50.839 20.0343 49.7524 17.2655 48.7601 15.3568ZM47.211 21.9053C46.3916 21.8455 45.635 20.9876 45.9605 20.1851C46.0548 19.9523 45.8685 19.7971 45.6664 19.7882C46.3714 18.3007 46.7441 16.6536 46.7328 15.022C46.7283 14.4124 46.6745 13.8072 46.5802 13.2087C47.6488 14.5654 48.5356 16.1083 49.0497 17.7399C49.3393 18.6532 49.501 19.7129 49.0654 20.6085C48.7332 21.2935 48.0417 21.963 47.211 21.9053Z" fill="#ffffff"/>
-                            </g>
-                            </svg>
-                        Pawfect Wave
-                        </span>
-                    </div>
-            </div>
-
-            <div className="lbx">
-                <dl>
-                    <dd>PawFectWave</dd>
-                </dl>
-                <strong>장례서비스</strong>
-                <div className="">
-                <a href="https://buly.kr/E793vRm" className="morebtn flex items-center space-x-6">
-                    <span>Figma</span>
-                    <img
-                        src="/figma.svg"
-                        alt="아이콘"
-                        className="w-[33px] h-[33px] invert"
-                    />
-                    <i className="bi bi-arrow-right text-white"></i>
-                </a>
-                <a href="https://github.com/juhyun88/vite_react_paw" className="morebtn flex items-center space-x-9">
-                    <span>Git</span>
-                    <img
-                        src="/Vector.svg"
-                        alt="아이콘"
-                        className="w-[33px] h-[33px] invert"
-                    />
-                    <i className="bi bi-arrow-right text-white"></i>
-              
-                    </a>
-
-                <a href="https://vite-react-paw.vercel.app" className="morebtn flex items-center space-x-6">
-                    <span>View</span>
-                    <img
-                        src="/logowhite.svg"
-                        alt="아이콘"
-                        className="w-[33px] h-[33px]"
-                    />
-                    <i className="bi bi-arrow-right text-white"></i>
-                </a>
+            <div className="lg:flex-row-reverse lg:flex w-full">
+              <div className="obj relative mt-5 lg:mt-0 lg:w-[50vw] overflow-hidden">
+                  
+                  {/* 배경 이미지 */}
+                  <img
+                      src="https://juhyun88.github.io/pawfectwave_team_react/img/main/Main_background1.svg"
+                      alt="PawfectWave"
+                      className="h-full max-w-[none] w-[110%]"
+                  />
+                {/* 이미지 중앙 텍스트 */}
+                      <div className="absolute start-0 bottom-0 top-0 end-0 flex justify-center items-center">
+                          <span className="text-white text-[30px] font-bold flex items-center gap-2">
+                          <svg width="50" height="30" viewBox="0 0 50 30" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                              <g >
+                              <path stroke="2" d="M38.6175 18.1833C38.6287 18.1278 38.6422 18.0746 38.6624 18.0237C38.6692 18.0104 38.6804 17.986 38.6826 17.9815C38.6939 17.9638 38.7051 17.9461 38.7163 17.9283C38.7185 17.9261 38.741 17.8929 38.75 17.8862C38.7769 17.8574 38.8083 17.8308 38.8375 17.8064C38.979 17.6911 38.9565 17.4539 38.8375 17.3364C38.6983 17.199 38.503 17.2212 38.3616 17.3364C37.8093 17.7865 37.8407 18.6577 38.2246 19.203C38.6714 19.8392 39.4594 20.0742 40.1913 20.2139C40.3687 20.2471 40.555 20.1651 40.6066 19.9811C40.6515 19.8193 40.5505 19.6065 40.3709 19.571C40.0633 19.5112 39.7535 19.4424 39.4617 19.3272C39.4482 19.3227 39.4347 19.3161 39.3921 19.2961C39.3584 19.2806 39.327 19.2651 39.2955 19.2474C39.2327 19.2141 39.1698 19.1786 39.1092 19.1387C39.089 19.1254 39.0261 19.0811 39.0261 19.0811C39.0418 19.0922 39.0351 19.0855 39.0037 19.0634C38.9902 19.0523 38.9767 19.039 38.9633 19.0279C38.9139 18.9835 38.8645 18.9348 38.8218 18.8816C38.8128 18.8705 38.7926 18.8439 38.7926 18.8395C38.7747 18.8151 38.759 18.7885 38.7455 18.7619C38.7298 18.7353 38.7163 18.7064 38.7028 18.6798C38.7006 18.6732 38.6983 18.671 38.6961 18.6665C38.6916 18.6555 38.6871 18.6422 38.6826 18.6311C38.6624 18.5668 38.6422 18.5047 38.6287 18.4404C38.6265 18.4338 38.622 18.3806 38.622 18.3828C38.6198 18.3628 38.6175 18.3407 38.6175 18.3185C38.6175 18.2897 38.6175 18.2586 38.6198 18.2298C38.6153 18.2143 38.6153 18.1988 38.6175 18.1833Z" fill="#ffffff"/>
+                              <path  d="M32.9216 16.7578C30.3712 16.2413 27.6479 16.8088 25.551 18.3406C25.2053 18.5933 25.5421 19.1697 25.89 18.9148C27.841 17.4916 30.36 16.9174 32.742 17.4007C33.164 17.4849 33.3459 16.8443 32.9216 16.7578Z" fill="#ffffff"/>
+                              <path  d="M6.10451 24.9468C4.86299 24.3017 3.91108 23.1423 3.53616 21.8056C3.04674 20.0543 3.70005 18.2653 4.29948 16.627C4.44765 16.2236 3.79659 16.0506 3.65066 16.4497C3.12756 17.8795 2.59099 19.3803 2.70549 20.9255C2.79304 22.1093 3.27573 23.2243 4.0413 24.1354C4.83156 25.0776 5.88898 25.6961 7.07886 26.0131C7.74789 26.1927 8.48427 26.3102 9.06124 26.7181C9.53046 27.0484 9.966 27.6514 9.73252 28.241C9.53495 28.7354 8.97818 29.0058 8.49325 29.1455C7.93647 29.3051 7.34602 29.3428 6.77129 29.2985C5.60835 29.2076 4.49255 28.7221 3.56535 28.0349C1.46397 26.4786 0.550232 23.967 0.675955 21.4287C0.752287 19.8791 1.18334 18.3429 1.84788 16.9396C2.41363 15.7447 3.19042 14.3747 4.56439 13.9868C4.97973 13.8693 4.80462 13.2286 4.38479 13.3461C3.08041 13.7119 2.21158 14.8137 1.59643 15.9465C0.891481 17.2455 0.379608 18.6643 0.143877 20.1208C-0.300644 22.8475 0.249395 25.7294 2.24076 27.76C3.92904 29.4825 6.76455 30.6374 9.13084 29.6199C9.67864 29.3849 10.1793 28.9903 10.3836 28.4162C10.6014 27.7999 10.3813 27.1459 9.97723 26.6582C9.00961 25.4944 7.36174 25.5986 6.10451 24.9468Z" fill="#ffffff"/>
+                              <path  d="M36.0646 13.5634C36.6056 12.7631 37.3083 12.0714 38.1166 11.5372C38.4758 11.3 38.139 10.7236 37.7776 10.963C36.105 12.067 34.8657 13.7651 34.3628 15.6915C34.2416 16.1571 34.08 16.7268 34.2416 17.199C34.3763 17.5936 34.7355 17.8485 35.1419 17.9261C36.0668 18.099 37.0075 17.6091 37.791 17.1835C38.8754 16.596 39.8565 15.8268 40.6894 14.9245C40.9813 14.6097 40.5053 14.1375 40.2135 14.4545C39.5759 15.144 38.8574 15.7514 38.0582 16.2546C37.6608 16.5051 37.2477 16.729 36.8212 16.9241C36.4777 17.0815 36.1207 17.2389 35.7413 17.2832C35.4831 17.312 35.0857 17.3231 34.9241 17.0748C34.7153 16.7556 34.9353 16.1615 35.0251 15.8268C35.2384 15.022 35.5931 14.2595 36.0646 13.5634Z" fill="#ffffff"/>
+                              <path  d="M48.7601 15.3568C48.136 14.153 47.3547 13.0335 46.4567 12.0138C46.4095 11.9606 46.3579 11.9318 46.3063 11.9163C45.8415 10.1805 45.0199 8.53559 43.9445 7.08577C42.1978 4.73371 39.8225 2.83167 37.1307 1.63014C34.0685 0.262353 30.6313 -0.178797 27.2974 0.0650552C23.7704 0.322208 20.3265 1.31313 17.1228 2.77403C14.294 4.06423 11.6179 5.75567 9.39977 7.93039C7.28268 10.0053 5.57644 12.5791 4.9366 15.4854C4.37533 18.0281 4.64923 21.1849 6.73713 23.0293C7.21982 23.4549 7.77884 23.7719 8.39174 23.9736C12.022 25.0045 15.778 25.5498 19.5429 25.7892C21.1818 25.8934 22.9397 25.8668 24.4102 25.0532C25.5417 24.4281 26.5677 22.9982 26.0963 21.6659C25.4811 19.9257 23.2585 20.3003 21.7364 20.5154C21.9137 19.6996 22.3089 18.937 22.4256 18.1057C22.5536 17.1901 22.2639 16.3256 21.6017 15.6694C20.9304 15.0043 20.0211 14.6563 19.0962 14.5011C18.2139 14.3548 17.2799 14.2794 16.3909 14.3991C15.558 14.5122 14.6936 14.8602 14.3344 15.6671C14.1615 16.0551 14.7408 16.3943 14.9159 16.0019C15.1853 15.3967 15.7892 15.1595 16.4156 15.062C17.1654 14.9422 17.9759 15.0065 18.7235 15.1107C19.5564 15.226 20.4073 15.4743 21.0359 16.0507C21.6421 16.6071 21.8935 17.3409 21.7409 18.1478C21.5635 19.0877 21.1077 19.9434 20.9977 20.9011C20.9798 21.0651 21.1684 21.2536 21.3345 21.2336C22.1382 21.1361 22.9554 20.9853 23.7681 20.9898C24.3968 20.992 25.1242 21.1472 25.416 21.7657C25.6472 22.2556 25.5036 22.8475 25.2566 23.3041C24.9356 23.8983 24.4349 24.3084 23.8288 24.601C22.4593 25.2594 20.8406 25.2128 19.3588 25.1087C17.6571 24.9889 15.9553 24.8182 14.2671 24.5611C12.3453 24.2685 10.4415 23.8606 8.57134 23.3308C6.08382 22.5172 5.21498 19.5666 5.35642 17.2322C5.5248 14.4678 6.85163 11.8475 8.62298 9.7482C10.4774 7.54909 12.8257 5.79114 15.3492 4.40562C18.2184 2.82945 21.3569 1.67448 24.5876 1.08258C27.8384 0.486254 31.2307 0.499555 34.4299 1.37521C37.1599 2.12228 39.6676 3.56101 41.6859 5.52512C43.6369 7.42052 45.1276 9.81027 45.7495 12.4572C46.3871 15.1706 46.0122 18.0325 44.5529 20.4333C43.2934 22.5061 41.1673 24.2596 38.6416 24.417C37.6965 24.4769 36.7221 24.3106 35.9274 23.7741C35.072 23.1955 34.6185 22.2201 34.5085 21.2225C34.4703 20.8678 34.4591 20.5154 34.5354 20.1651C34.6275 19.735 34.7981 19.3271 34.9642 18.9215C35.1281 18.5247 34.4771 18.354 34.3154 18.7441C33.9787 19.5577 33.7384 20.3358 33.835 21.2225C33.9001 21.8277 34.0505 22.4174 34.3334 22.9583C34.8228 23.8983 35.6984 24.5655 36.7131 24.8737C39.0278 25.5786 41.54 24.5833 43.2597 23.0448C44.0275 22.3576 44.6764 21.5484 45.1995 20.6639C45.2354 21.3511 45.7158 22.0007 46.331 22.3265C47.2447 22.8098 48.3044 22.5194 49.0138 21.8233C50.839 20.0343 49.7524 17.2655 48.7601 15.3568ZM47.211 21.9053C46.3916 21.8455 45.635 20.9876 45.9605 20.1851C46.0548 19.9523 45.8685 19.7971 45.6664 19.7882C46.3714 18.3007 46.7441 16.6536 46.7328 15.022C46.7283 14.4124 46.6745 13.8072 46.5802 13.2087C47.6488 14.5654 48.5356 16.1083 49.0497 17.7399C49.3393 18.6532 49.501 19.7129 49.0654 20.6085C48.7332 21.2935 48.0417 21.963 47.211 21.9053Z" fill="#ffffff"/>
+                              </g>
+                              </svg>
+                          Pawfect Wave
+                          </span>
+                      </div>
               </div>
-             
+              {/* 포트폴리오설명 */}
 
-                {/* 이미지 2개를 옆으로 배치 */}
-                <div className="flex items-center gap-4 mt-[60px]">
-                    {/* 회전 이미지 */}
-                    <img
-                    src="https://www.inzent-iss.com/asset/img/main/se04_star_purple.png"
-                    alt="object"
-                    className="w-[33px] h-[33px] animate-spin [animation-duration:3s] "
-                    />
+              
+              <div className="lbx  lg:flex flex-col items-start grow">
+                  <h2 className="hidden lg:block text-white text-title">PawFectWave</h2>                
+                  <p className="hidden  lg:block text-white text-subtitle">장례서비스</p>
+
+                <div className="lg:flex lg:mt-[3rem] w-full">
+
+                      <div className="links hidden lg:block">
+                        <a href="https://buly.kr/E793vRm" className="morebtn flex items-center space-x-6">
+                            <span >Figma</span>
+                            <img
+                                src="/figma.svg"
+                                alt="아이콘"
+                                className="w-[33px] h-[33px] invert"
+                            />
+                            <i className="bi bi-arrow-right text-white hidden lg:block"></i>
+                        </a>
+                        <a href="https://github.com/juhyun88/vite_react_paw" className="morebtn flex items-center space-x-9">
+                            <span>Git</span>
+                            <img
+                                src="/Vector.svg"
+                                alt="아이콘"
+                                className="w-[33px] h-[33px] invert"
+                            />
+                            <i className="bi bi-arrow-right text-white hidden lg:block"></i>
+                      
+                            </a>
+
+                        <a href="https://vite-react-paw.vercel.app" className="morebtn flex items-center space-x-6">
+                            <span >View</span>
+                            <img
+                                src="/logowhite.svg"
+                                alt="아이콘"
+                                className="w-[33px] h-[33px]"
+                            />
+                            <i className="bi bi-arrow-right text-white hidden lg:block"></i>
+                        </a>
+                      </div>
+
+                        <div className="rbx mx-auto">
+                          <h2 className=" lg:hidden text-white text-title">PawFectWave</h2>                
+                          <p className=" lg:hidden text-white text-subtitle mb-[50px]">장례서비스</p>
+                          <ul className="sessions">
+                            <li>
+                              <span>개발 환경</span>
+                              <dl>
+                                <dt>제작기간 : 2025.05.11 ~ 2025.06.09</dt>
+                                <dd>Vite + TypeScript + Tailwind로 개발하고,<br /> Supabase를 백엔드로 사용하며 Vercel에서 배포되는 프로젝트</dd>
+                              </dl>
+                            </li>
+                            <li>
+                              <span>팀 구성 & 기여도</span>
+                              <dl>
+                              
+                                <dd>프론트엔드 & 퍼블리싱 100%,<br /> 기획+디자인 30%
+                                </dd>
+                              </dl>
+                            </li>
+                            <li>
+                              <span>Supabase & API 연동</span>
+                              <dl>
+                                <dt>실시간 예약 및 데이터 관리</dt>
+                                <dd>Supabase와 REST API를 활용하여<br /> 예약 폼 데이터를 실시간으로 저장하고 관리할 수 있도록 구현</dd>
+                              </dl>
+                            </li>
+                          </ul>
+
+                              <div className="flex lg:hidden justify-center gap-4 mt-5 pt-5">
+                                  <a href="https://buly.kr/E793vRm" className="morebtn flex items-center space-x-6 relative">
+                                      
+                                      <img
+                                          src="/figma.svg"
+                                          alt="아이콘"
+                                          className="w-[33px] h-[33px] invert"
+                                      /> 
+                                  </a>
+                                  <a href="https://github.com/juhyun88/vite_react_paw" className="morebtn flex items-center space-x-9 relative">        
+                                      <img
+                                          src="/Vector.svg"
+                                          alt="아이콘"
+                                          className="w-[33px] h-[33px] invert"
+                                      />
+                                      </a>
+                                  <a href="https://vite-react-paw.vercel.app" className="morebtn flex items-center space-x-6 relative">  
+                                      <img
+                                          src="/logowhite.svg"
+                                          alt="아이콘"
+                                          className="w-[33px] h-[33px]"
+                                      />
+                                  </a>
+                                            {/* 회전이미지 모바일 */}
+                                      <div className="block absolute bottom-[30px] md:bottom-[20px] start-0   ">
+                                            <img
+                                            src="https://www.inzent-iss.com/asset/img/main/se04_star_purple.png"
+                                            alt="object"
+                                            className="w-[33px] h-[33px] animate-spin [animation-duration:3s] "
+                                            />
+                                      </div>
+                              </div> 
+                        </div>
+                          <div className="hidden md:block absolute bottom-[30px] start-0   ">
+                                {/* 회전 이미지 pc */}
+                                <img
+                                src="https://www.inzent-iss.com/asset/img/main/se04_star_purple.png"
+                                alt="object"
+                                className="w-[33px] h-[33px] animate-spin [animation-duration:3s] "
+                                />
+
+                        
+                          </div>
+                </div>   
+
+              </div>
+            </div>
 
             
-                </div>
 
-
-                
-
-            </div>
-
-            <div className="rbx">
-              <ul className="sessions">
-                <li>
-                  <span>개발 환경</span>
-                  <dl>
-                    <dt>제작기간 : 2025.05.11 ~ 2025.06.09</dt>
-                    <dd>Vite + TypeScript + Tailwind로 개발하고,<br /> Supabase를 백엔드로 사용하며 Vercel에서 배포되는 프로젝트</dd>
-                  </dl>
-                </li>
-                <li>
-                  <span>팀 구성 & 기여도</span>
-                  <dl>
-                   
-                    <dd>프론트엔드 & 퍼블리싱 100%,<br /> 기획+디자인 30%
-                    </dd>
-                  </dl>
-                </li>
-                <li>
-                  <span>Supabase & API 연동</span>
-                  <dl>
-                    <dt>실시간 예약 및 데이터 관리</dt>
-                    <dd>Supabase와 REST API를 활용하여<br /> 예약 폼 데이터를 실시간으로 저장하고 관리할 수 있도록 구현</dd>
-                  </dl>
-                </li>
-              </ul>
-            </div>
+            
           </article>
 
           {/* 두 번째 프로젝트 */}
           <article className="bx _2" {...fadeInLeft2}>
             <span className="linetop"></span>
 
-            <div className="obj">
-              <img src="/vip.jpg" alt="object" />
-            </div>
+            <div className="lg:flex-row-reverse lg:flex w-full">
+              <div className="obj relative mt-5 lg:mt-0 lg:w-1/2">
 
-            <div className="lbx">
-              <dl>
-                <dd>VIP 동물의료센터</dd>
-              </dl>
-              <strong>동물의료센터</strong>
-              <div className="">
-                <a href="https://buly.kr/7bH1dPl" className="morebtn flex items-center space-x-6">
-                    <span>Figma</span>
-                    <img
-                        src="/figma.svg"
-                        alt="아이콘"
-                        className="w-[33px] h-[33px] invert"
-                    />
-                    <i className="bi bi-arrow-right text-white"></i>
-                </a>
-                <a href="https://github.com/juhyun88/iweb_src" className="morebtn flex items-center space-x-9">
-                    <span>Git</span>
-                    <img
-                        src="/Vector.svg"
-                        alt="아이콘"
-                        className="w-[33px] h-[33px] invert"
-                    />
-                    <i className="bi bi-arrow-right text-white"></i>
-              
-                    </a>
+                <img src="/vip.jpg" alt="object" className="h-full max-w-[none] w-[110%]" />
+            
+                      {/* 왼쪽 전체 툴 */}
+                      <div className="lbx lg:flex flex-col items-start grow lg:w-[50vw] px-6">
+                        <h2 className="hidden lg:block text-white text-title">VIP 동물의료센터</h2>         
+                        <p className="hidden  lg:block text-white text-subtitle">동물의료센터</p>
+                    
+                          {/* 아이콘+설명 */}
+                          <div className="lg:flex lg:mt-[3rem] w-full">
 
-                <a href="https://www.i-web.kr/green19/" className="morebtn flex items-center space-x-6">
-                    <span>View</span>
-                    <img
-                        src="/viplogo.svg"
-                        alt="아이콘"
-                        className="w-[33px] h-[33px]"
-                    />
-                    <i className="bi bi-arrow-right text-white"></i>
-                </a>
+                              {/* 아이콘 */}
+                              <div className="links hidden lg:block">
+                                <a href="https://buly.kr/7bH1dPl" className="morebtn flex items-center space-x-6">
+                                    <span>Figma</span>
+                                    <img
+                                        src="/figma.svg"
+                                        alt="아이콘"
+                                        className="w-[33px] h-[33px] invert"
+                                    />
+                                    <i className="bi bi-arrow-right text-white"></i>
+                                </a>
+                                <a href="https://github.com/juhyun88/iweb_src" className="morebtn flex items-center space-x-9">
+                                    <span>Git</span>
+                                    <img
+                                        src="/Vector.svg"
+                                        alt="아이콘"
+                                        className="w-[33px] h-[33px] invert"
+                                    />
+                                    <i className="bi bi-arrow-right text-white"></i>
+                                    </a>
+                                <a href="https://www.i-web.kr/green19/" className="morebtn flex items-center space-x-6">
+                                    <span>View</span>
+                                    <img
+                                        src="/viplogo.svg"
+                                        alt="아이콘"
+                                        className="w-[33px] h-[33px]"
+                                    />
+                                    <i className="bi bi-arrow-right text-white"></i>
+                                </a>
+                              </div>
+
+                                {/* 설명 */}
+                                <div className="rbx mx-auto">
+                                  <h2 className="lg:hidden text-white text-title">VIP 동물의료센터</h2>         
+                                  <p className="lg:hidden text-white text-subtitle mb-[50px]">동물의료센터</p>
+                                    <ul className="sessions">
+                                      <li>
+                                        <span>개발환경</span>
+                                        <dl>
+                                          <dt>제작기간 : 2025.04 ~ 2025.05</dt>
+                                          <dd>i-Web의 플랫폼. HTML5, CSS3, JavaScript, jQuery, Swiper, Slick Slider, Git.</dd>
+                                        </dl>
+                                      </li>
+                                      <li>
+                                        <span>팀 구성 & 기여도</span>
+                                        <dl>
+                                        
+                                          <dd>퍼블리싱 100%</dd>
+                                        </dl>
+                                      </li>
+                                      <li>
+                                        <span>서비스 관리</span>
+                                        <dl>
+                                          <dt>운영 최적화</dt>
+                                          <dd>SEO 최적화, 네이버 애널리틱스 연동, GitHub 기반 유지보수를 수행.</dd>
+                                        </dl>
+                                      </li>
+                                    </ul>
+                              
+
+                                      <div className="flex lg:hidden justify-center gap-4 mt-5 pt-5">
+                                        <a href="https://buly.kr/7bH1dPl" className="morebtn flex items-center space-x-6 relative">
+                                           
+                                              <img
+                                                  src="/figma.svg"
+                                                  alt="아이콘"
+                                                  className="w-[33px] h-[33px] invert"
+                                              />
+                                              </a>
+                                              <a href="https://github.com/juhyun88/iweb_src" className="morebtn flex items-center space-x-9 relative">
+                                          
+                                              <img
+                                                  src="/Vector.svg"
+                                                  alt="아이콘"
+                                                  className="w-[33px] h-[33px] invert"
+                                              />
+                                              </a>
+                                          <a href="https://www.i-web.kr/green19/" className="morebtn flex items-center space-x-6 relative">
+                                       
+                                              <img
+                                                  src="/viplogo.svg"
+                                                  alt="아이콘"
+                                                  className="w-[33px] h-[33px]"
+                                              />
+                                          </a>
+
+                                          {/* 회전 이미지 모바일용 */}
+                                          <div className="block md:hidden absolute bottom-[30px] md:bottom-[20px] start-0   ">
+                                            <img
+                                              src="https://www.inzent-iss.com/asset/img/main/se04_star_yellow.png"
+                                              alt="object"
+                                            />
+                                          </div>  
+                                      </div>
+                                </div>
+                  
+                                          {/* 회전 이미지 pc용 */}
+                                        <div className="hidden md:block absolute bottom-[30px] start-0   ">
+                                            <img
+                                                  src="https://www.inzent-iss.com/asset/img/main/se04_star_yellow.png"
+                                                  alt="object"
+                                                />
+                                        </div>
+                          </div>
+                      </div>
               </div>
-              
-              <img
-                src="https://www.inzent-iss.com/asset/img/main/se04_star_yellow.png"
-                alt="object"
-              />
             </div>
-
-            <div className="rbx">
-              <ul className="sessions">
-                <li>
-                  <span>개발환경</span>
-                  <dl>
-                    <dt>제작기간 : 2025.04 ~ 2025.05</dt>
-                    <dd>i-Web의 플랫폼. HTML5, CSS3, JavaScript, jQuery, Swiper, Slick Slider, Git.</dd>
-                  </dl>
-                </li>
-                <li>
-                  <span>팀 구성 & 기여도</span>
-                  <dl>
-                   
-                    <dd>퍼블리싱 100%</dd>
-                  </dl>
-                </li>
-                <li>
-                  <span>서비스 관리</span>
-                  <dl>
-                    <dt>운영 최적화</dt>
-                    <dd>SEO 최적화, 네이버 애널리틱스 연동, GitHub 기반 유지보수를 수행.</dd>
-                  </dl>
-                </li>
-              </ul>
-            </div>
-
             <span className="linetop _b"></span>
           </article>
         </div>

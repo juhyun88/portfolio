@@ -27,11 +27,11 @@ const Contact = () => {
 
   return (
     <section className="se05 bg-black">
-      <div className="contact flex" data-aos="fade-up" data-aos-duration="800">
-        <div className="imgWrap">
+      <div className="contact flex md:flex-row flex-col" data-aos="fade-up" data-aos-duration="800">
+        <div className="imgWrap md:w-[50%] w-[100%] mb-[85px]">
           <img src="/contact.jpg" alt="" />
         </div>
-        <div className="textWrap">
+        <div className="textWrap md:w-[50%]">
           <p className="mont title">Contact us</p>
           <form onSubmit={handleSubmit}>
             <ul className="typeTable">

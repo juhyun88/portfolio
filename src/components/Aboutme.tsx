@@ -10,7 +10,15 @@ const Aboutme = () => {
 
       {/*  배경 이미지 + 텍스트 오버레이 영역 */}
       <div
-        className="mainVisual relative h-[840px] w-full bg-cover bg-center bg-fixed"
+  className="
+    mainVisual relative
+    md:h-[840px] h-[440px]
+    w-full
+    md:bg-fixed
+    md:bg-cover bg-[length:150%]
+    md:bg-center bg-[position:36%_center]
+    bg-no-repeat
+  "
         style={{ backgroundImage: "url('/IMG_2599.JPG')" }}
       >
         {/*  어두운 배경 오버레이 */}
@@ -20,14 +28,14 @@ const Aboutme = () => {
         <div className="relative z-10 flex items-center h-full text-black text-center px-4">
           {/* 왼쪽 그룹: LIFELONG + 선 + 설명 */}
           <div className="relative flex items-center">
-            <p className="mont text-title text-white">
+            <p className="mont text-title text-white md:text-[120px] text-[30px] md:tracking-[-7.204px]">
               <span className="block">LIFELONG</span>
             </p>
 
-            <div className="w-[380px] h-[1px] bg-white mx-4"></div>
+            <div className="md:w-[380px] w-[100px] h-[1px] bg-white md:mx-4"></div>
 
             <div
-              className="absolute top-1/2 left-1/2 transform translate-x-[97%] translate-y-[15%] text-white text-end z-10 px-4 max-w-4xl text-description"
+              className="absolute text-[13px] md:text-[19px] md:top-1/2 top-[56%] md:left-1/2 -right-[15px] transform md:translate-x-[97%] translate-y-[15%] text-white text-end z-10 px-4 max-w-4xl text-description"
               style={{ lineHeight: 1.6 }}
             >
               기술 트렌드에 대한 관심과<br />
@@ -37,7 +45,7 @@ const Aboutme = () => {
 
           {/* 오른쪽 그룹: LEARNER */}
           <div className="ml-auto">
-            <span className="block mont text-title text-white">LEARNER</span>
+            <span className="block mont text-title text-white md:tracking-[-7.204px] md:text-[120px] text-[30px]">LEARNER</span>
           </div>
         </div>
 

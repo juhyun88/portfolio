@@ -51,6 +51,17 @@ const Preinterview: React.FC<PreinterviewProps> = ({ datainfo, id, cls }) => {
         className="px-6"
         onSwiper={swiper => (swiperRef.current = swiper)}
         onSlideChange={swiper => setCurrentSlide(swiper.realIndex)}
+        breakpoints={{
+          0: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 3,
+          },
+          1024: {
+            slidesPerView: 5,
+          },
+        }}
       >
         {datainfo.map((item, i) => (
           <SwiperSlide key={i}>
