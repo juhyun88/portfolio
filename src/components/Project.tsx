@@ -2,7 +2,7 @@ import { useScrollFadeIn } from "../hooks/useScrollFadeIn";
 
 function Program() {
   const fadeInLeft1 = useScrollFadeIn("left", 1.2, 0);
-  const fadeInLeft2 = useScrollFadeIn("left", 1.2, 0.3);
+
 
   return (
     <div>
@@ -161,132 +161,7 @@ function Program() {
             
 
             
-          </article>
-
-          {/* 두 번째 프로젝트 */}
-          <article className="bx _2" {...fadeInLeft2}>
-            <span className="linetop"></span>
-
-            <div className="lg:flex-row-reverse lg:flex w-full">
-              <div className="obj relative mt-5 lg:mt-0 lg:w-1/2">
-
-                <img src="/vip.jpg" alt="object" className="h-full max-w-[none] w-[110%]" />
-            
-                      {/* 왼쪽 전체 툴 */}
-                      <div className="lbx lg:flex flex-col items-start grow lg:w-[50vw] px-6">
-                        <h2 className="hidden lg:block text-white text-title">VIP 동물의료센터</h2>         
-                        <p className="hidden  lg:block text-white text-subtitle">동물의료센터</p>
-                    
-                          {/* 아이콘+설명 */}
-                          <div className="lg:flex lg:mt-[3rem] w-full">
-
-                              {/* 아이콘 */}
-                              <div className="links hidden lg:block">
-                                <a href="https://buly.kr/7bH1dPl" className="morebtn flex items-center space-x-6">
-                                    <span>Figma</span>
-                                    <img
-                                        src="/figma.svg"
-                                        alt="아이콘"
-                                        className="w-[33px] h-[33px] invert"
-                                    />
-                                    <i className="bi bi-arrow-right text-white"></i>
-                                </a>
-                                <a href="https://github.com/juhyun88/iweb_src" className="morebtn flex items-center space-x-9">
-                                    <span>Git</span>
-                                    <img
-                                        src="/Vector.svg"
-                                        alt="아이콘"
-                                        className="w-[33px] h-[33px] invert"
-                                    />
-                                    <i className="bi bi-arrow-right text-white"></i>
-                                    </a>
-                                <a href="https://www.i-web.kr/green19/" className="morebtn flex items-center space-x-6">
-                                    <span>View</span>
-                                    <img
-                                        src="/viplogo.svg"
-                                        alt="아이콘"
-                                        className="w-[33px] h-[33px]"
-                                    />
-                                    <i className="bi bi-arrow-right text-white"></i>
-                                </a>
-                              </div>
-
-                                {/* 설명 */}
-                                <div className="rbx mx-auto">
-                                  <h2 className="lg:hidden text-white text-title">VIP 동물의료센터</h2>         
-                                  <p className="lg:hidden text-white text-subtitle mb-[50px]">동물의료센터</p>
-                                    <ul className="sessions">
-                                      <li>
-                                        <span>개발환경</span>
-                                        <dl>
-                                          <dt>제작기간 : 2025.04 ~ 2025.05</dt>
-                                          <dd>i-Web의 플랫폼. HTML5, CSS3, JavaScript, jQuery, Swiper, Slick Slider, Git.</dd>
-                                        </dl>
-                                      </li>
-                                      <li>
-                                        <span>팀 구성 & 기여도</span>
-                                        <dl>
-                                        
-                                          <dd>퍼블리싱 100%</dd>
-                                        </dl>
-                                      </li>
-                                      <li>
-                                        <span>서비스 관리</span>
-                                        <dl>
-                                          <dt>운영 최적화</dt>
-                                          <dd>SEO 최적화, 네이버 애널리틱스 연동, GitHub 기반 유지보수를 수행.</dd>
-                                        </dl>
-                                      </li>
-                                    </ul>
-                              
-
-                                      <div className="flex lg:hidden justify-center gap-4 mt-5 pt-5">
-                                        <a href="https://buly.kr/7bH1dPl" className="morebtn flex items-center space-x-6 relative">
-                                           
-                                              <img
-                                                  src="/figma.svg"
-                                                  alt="아이콘"
-                                                  className="w-[33px] h-[33px] invert"
-                                              />
-                                              </a>
-                                              <a href="https://github.com/juhyun88/iweb_src" className="morebtn flex items-center space-x-9 relative">
-                                          
-                                              <img
-                                                  src="/Vector.svg"
-                                                  alt="아이콘"
-                                                  className="w-[33px] h-[33px] invert"
-                                              />
-                                              </a>
-                                          <a href="https://www.i-web.kr/green19/" className="morebtn flex items-center space-x-6 relative">
-                                       
-                                              <img
-                                                  src="/viplogo.svg"
-                                                  alt="아이콘"
-                                                  className="w-[33px] h-[33px]"
-                                              />
-                                          </a>
-
-                                          {/* 회전 이미지 모바일용 */}
-                                          <div className="block md:hidden absolute bottom-[30px] md:bottom-[20px] start-0   ">
-                                            <img
-                                              src="https://www.inzent-iss.com/asset/img/main/se04_star_yellow.png"
-                                              alt="object"
-                                            />
-                                          </div>  
-                                      </div>
-                                </div>
-                  
-                                          {/* 회전 이미지 pc용 */}
-                                        <div className="hidden md:block absolute bottom-[30px] start-0   ">
-                                            <img
-                                                  src="https://www.inzent-iss.com/asset/img/main/se04_star_yellow.png"
-                                                  alt="object"
-                                                />
-                                        </div>
-                          </div>
-                      </div>
-              </div>
-            </div>
+          
             <span className="linetop _b"></span>
           </article>
         </div>
