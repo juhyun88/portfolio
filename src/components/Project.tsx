@@ -161,9 +161,11 @@ function Program() {
             
 
             
-          
-            <span className="linetop _b"></span>
           </article>
+
+         
+            <span className="linetop _b"></span>
+      
         </div>
       </section>
     </div>

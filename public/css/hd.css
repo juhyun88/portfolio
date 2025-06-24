@@ -2,7 +2,7 @@
 .header{ color: #fff; z-index: 995; position: fixed; top: 0; left: 0; width: 100%;  transition-duration: 0.4s; }
 .header .wrap{ display: flex; justify-content: space-between; }
 .header .wrap .logo{ flex-shrink: 0; }
-.header .wrap .logo > span{font-family: 'Sora'; font-size: 20px; padding: 20px 0; display: block; transition-duration: 0.4s; max-width:150px; width:25vw  }
+.header .wrap .logo > span{font-family: 'Sora'; font-size: 18px; padding: 20px 0; display: block; transition-duration: 0.4s; max-width:150px; width:25vw  }
 .header .wrap nav{ width: 100%; display: flex; justify-content: flex-start; }
 .header .wrap nav .menu{ display: flex; justify-content: flex-start; }
 .header .wrap nav .menu li{ position: relative; }
@@ -253,7 +253,7 @@
 ._m .se04 .wrap > dl{ padding-bottom: 40px; color:white; line-height: 1; }
 ._m .se04 .wrap .bx{ width: 100%; box-sizing: border-box; padding: 40px 0; position: relative; display: flex; align-items: center; }
 ._m .se04 .wrap .bx > .linetop{ width: 100%; position: absolute; top: 0; left: 0; height: 1px; background-color: #fff; transform-origin: 0 0; }
-._m .se04 .wrap .bx > .linetop._b{ top: auto; bottom: 0; }
+._m .se04 .wrap .bx > .linetop._b{ top: auto; bottom: 0;  color: #fff; }
 ._m .se04 .wrap .bx .lbx dl{ font-family: 'Campton'; font-weight: 500; }
 ._m .se04 .wrap .bx .lbx dl dt{ font-size: 18px; color:green; }
 ._m .se04 .wrap .bx .lbx dl dd{ font-size: 30px; margin-top: 10px; color:white;  }

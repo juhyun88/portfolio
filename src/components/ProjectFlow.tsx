@@ -12,10 +12,9 @@ const ProjectFlow = () => {
             {/* 이미지 및 GitHub 아이콘 위치 제어 컨테이너 */}
             <div className="md:w-full md:max-w-[1680px] md:mx-auto md:relative">
               {/* 이미지 */}
-              <div className="group shadow-xl rounded-xl md:overflow-hidden 
-                              md:w-[1680px] md:w-full md:px-4 md:px-0 md:mx-auto mx-0">
+              <div className="w-full max-w-[1600px] mx-auto px-4">
           
-        <svg width="1633" height="1727" viewBox="0 0 1633 1727" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="1633" height="1727" viewBox="0 0 1633 1727" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto">
     
             <rect width="1513" height="1727" fill="black"/>
            
